@@ -1,0 +1,24 @@
+{
+  "name": "@tv-mazing/tv-mazing",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Rick Heere <rickheere@gmail.com>",
+  "homepage": "Controll the scraper",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "dev": "tsc -w",
+    "tsc":"tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@tv-mazing/scraper": "0.0.0"
+  }
+}
