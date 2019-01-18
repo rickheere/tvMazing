@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "@tv-mazing/workspace",
   "private": true,
   "devDependencies": {
     "lerna": "^3.10.5"
@@ -7,5 +7,8 @@
   "dependencies": {
     "@types/node": "^10.12.18",
     "typescript": "^3.2.2"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
