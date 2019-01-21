@@ -22,12 +22,18 @@
   "scripts": {
     "dev": "tsc -w",
     "tsc": "tsc",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean": "rimraf lib"
   },
   "dependencies": {
     "@tv-mazing/types": "0.0.0",
+    "@tv-mazing/persistence": "0.0.0",
+    "request-promise-native": "^1.0.5",
     "@types/request-promise-native": "^1.0.15",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.5"
+    "pino": "^5.10.8",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3"
   }
 }

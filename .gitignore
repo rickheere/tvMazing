@@ -1,6 +1,9 @@
 yarn-error.log
+lerna-debug.log
 node_modules
-/packages/scraper/lib
-/packages/types1/lib
-/packages/tv-mazing/lib
-
+packages/scraper/lib
+packages/tv-mazing/lib
+packages/persistence/lib
+packages/types/lib
+data
+logs

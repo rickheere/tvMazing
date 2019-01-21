@@ -1,5 +1,5 @@
 {
-  "name": "@tv-mazing/types",
+  "name": "@tv-mazing/persistence",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Rick Heere <rickheere@gmail.com>",
@@ -19,7 +19,11 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "clean": "rimraf lib"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@tv-mazing/types": "0.0.0",
+    "@types/mongodb": "^3.1.19",
+    "@types/mongoose": "^5.3.8",
+    "mongoose": "^5.4.5",
     "rimraf": "^2.6.3"
   }
 }

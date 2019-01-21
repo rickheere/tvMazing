@@ -1,5 +1,11 @@
-export interface Config {
+export interface ApiConfig {
   baseUrl: string;
+}
+
+export interface PersistanceConfig {
+  mongoHost: string;
+  mongoPort: number;
+  dbName: string;
 }
 
 export interface Paginated {
@@ -12,17 +18,47 @@ export interface PaginatedResponse extends Paginated {
 }
 
 export interface Show {
-  id: number;
+  tvMazeId: number;
   name: string;
 }
 
 export interface Person {
-  id: number;
+  tvMazeId: number;
   name: string;
   birthday: string;
 }
 
-export interface showAndCastResource {
-  getShows(page: number): Show[];
-  getCastByShowId(id: number): Person[];
+export interface ShowSchema {
+  tvMazeId: number;
+  name: string;
+  cast: Person[];
 }
+
+export interface ShowAndCastResource {
+  getShows(page: number): Promise<Show[]>;
+  getCastByShowId(id: number): Promise<Person[]>;
+}
+
+export interface PersistenceLayer {
+  clear(): void;
+  saveShow(Show): void;
+  getShows(pageL: number);
+}
+
+export enum RequestType {
+  ShowRequest = "SHOW_REQUEST",
+  CastRequest = "CAST_REQUEST"
+}
+
+export interface RequestQueueItem {
+  type: RequestType;
+  url: string;
+  metaData?: {
+    showId: number;
+  };
+}
+
+export interface Page {
+  render(): string
+}
+
