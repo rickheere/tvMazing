@@ -1,11 +1,6 @@
 # `tv-mazing`
 
-> TODO: description
+> tv-mazing
 
 ## Usage
-
-```
-const tvMazing = require('tv-mazing');
-
-// TODO: DEMONSTRATE API
-```
+See the root README
